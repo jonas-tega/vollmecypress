@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
@@ -5,8 +8,9 @@ module.exports = defineConfig({
          setupNodeEvents(on, config) {
       // implement node event listeners here
     },
+    baseUrl: 'http://localhost:3000/',
     video: true,
-      reporter: 'mochawesome',
+    reporter: 'mochawesome',
       reporterOptions: {
         reportDir: 'cypress/results',
         overwrite: false,
